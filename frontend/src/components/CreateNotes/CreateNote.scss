@@ -1,0 +1,124 @@
+:root {
+    --primary-light: #8abdff;
+    --primary: #6d5dfc;
+    --primary-dark: #5b0eeb;
+    
+    --white: #FFFFFF;
+    --greyLight-1: #E4EBF5;
+    --greyLight-2: #c8d0e7;
+    --greyLight-3: #bec8e4;
+    --greyDark: #9baacf;
+  }
+  
+  $shadow: .3rem .3rem .6rem var(--greyLight-2), 
+  -.2rem -.2rem .5rem var(--white);
+  $inner-shadow: inset .2rem .2rem .5rem var(--greyLight-2), 
+  inset -.2rem -.2rem .5rem var(--white);
+
+.create-component{
+    height: calc(100vh - 120px);
+    background: #E4EBF5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .create-container{
+        border-radius: 20px;
+        // height: 500px;
+        // width: 800px;
+        width: 100%;
+        padding: 24px;
+        box-sizing: border-box;
+        background: #E4EBF5;
+        box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+        .create-header{
+            text-align: center;
+            color: #127ba3;
+            font-weight: 700;
+            font-size: 24px;
+        }
+        .create-feilds{
+            text-align: left;
+            padding: 0px 24px;
+        }
+        .create-labels, .create-input-fields{
+            display: block;
+            width: 100%;
+            padding: 0;
+            border: none;
+            outline: none;
+            box-sizing: border-box;
+        }
+        .create-labels{
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+        .create-input-fields {
+            background: #E4EBF5;
+            padding: 10px;
+            padding-left: 20px;
+            height: 50px;
+            font-size: 14px;
+            border-radius: 12px;
+            caret-color: #127ba3;
+            box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+        }
+
+        .create-buttons{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 24px;
+        }
+
+        .create-on{
+            display: flex;
+            justify-content: center;
+            font-size: 12px;
+            color: black;
+            padding-top: 12px;
+            font-style: italic;
+        }
+
+        /*  BUTTONS  */
+        .create-button {
+            padding: 8px 16px;
+            border-radius: 1rem;
+            box-shadow: $shadow;
+            justify-self: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: .3s ease;
+            font-size: 1rem;
+            border: none;
+            outline: none;
+        }
+        .cre-btn-primary{
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+            background: var(--primary);
+            box-shadow:inset .2rem .2rem 1rem var(--primary-light), 
+                        inset -.2rem -.2rem 1rem var(--primary-dark),
+                        $shadow;
+            color: var(--greyLight-1);
+        
+            &:hover { color: var(--white); }
+            &:active {
+                box-shadow:inset .2rem .2rem 1rem var(--primary-dark), 
+                    inset -.2rem -.2rem 1rem var(--primary-light);
+            }
+        }
+        .cre-btn-secondary{
+            grid-column: 1 / 2;
+            grid-row: 5 / 6;
+            color: var(--greyDark);
+            &:hover { color: red; }
+            &:active {
+                box-shadow: $inner-shadow;
+            }
+        }
+        
+    }
+}
