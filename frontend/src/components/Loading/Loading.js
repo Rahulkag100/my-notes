@@ -2,7 +2,7 @@ import React from "react";
 import { Spinner } from "react-bootstrap";
 import './Loading.scss'
 
-function Loading({ size = 100 }) {
+function Loading({ size = 30 }) {
   return (
     <div
       style={{
@@ -13,13 +13,7 @@ function Loading({ size = 100 }) {
         height: "100%",
       }}
     >
-      <Spinner
-        style={{
-          width: size,
-          height: size,
-        }}
-        animation="border"
-      />
+      <Spinner animation="border" variant="info" />
     </div>
     // <>
     // <div className="loader-container">
