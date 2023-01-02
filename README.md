@@ -1,5 +1,5 @@
 # MY NOTES APPLICATION
-#Desktop View Of My Notes Application
+Desktop View Of My Notes Application
 
 Landing Page
 ![landing page](https://user-images.githubusercontent.com/32638864/210227922-5da01b5d-427d-49b6-809f-0e3d9f027f3b.PNG)
